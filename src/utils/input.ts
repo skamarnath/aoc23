@@ -1,5 +1,8 @@
 import { join, dirname } from "https://deno.land/std@0.221.0/path/mod.ts";
+import { load } from "https://deno.land/std@0.221.0/dotenv/mod.ts";
 import log from "./log.ts";
+
+const env = await load();
 
 const inputCacheDir = new URL('../../.input-cache/', import.meta.url).pathname;
 
